@@ -70,7 +70,7 @@ class Blogposts extends React.Component<any, any> {
             <div className="w-fit m-auto">
                 <div className="mt-10 inline-flex flex-col gap-8 md:gap-5 pb-8 justify-center items-center m-auto">
                     {this.state.posts.length > 0 ? this.state.posts.map((post: any) => <Blogpost post={post} key={post._id} />)
-                        : <div className="font-bold text-3xl">Loading...</div>}
+                        : <div className="font-bold text-2xl">Loading...</div>}
                 </div>
             </div>
         </div>
