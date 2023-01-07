@@ -28,7 +28,6 @@ class Blogposts extends React.Component<any, any> {
             if (days <= 30) rPosts++;
         });
 
-        console.log(this.state.daysSinceLastBlogpost)
         this.setState({ recentPosts: rPosts });
     }
 
