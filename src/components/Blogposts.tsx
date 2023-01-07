@@ -33,23 +33,23 @@ class Blogposts extends React.Component<any, any> {
     }
 
     getDifferenceInDays(date1: Date, date2: Date) {
-        const diffInMs = Math.abs(date2.getMilliseconds() - date1.getMilliseconds());
-        return diffInMs / (1000 * 60 * 60 * 24);
+        var diff = Math.abs(date1.getTime() - date2.getTime());
+        return Math.ceil(diff / (1000 * 3600 * 24)); 
     }
 
     async componentDidMount() {
-        const urlParams = new URLSearchParams({ limit: "5" });
+        const now: Date = new Date()
 
-        const promise = fetch(`https://proxy.cors.sh/https://hytale.com/api/blog/post/published?` + urlParams, {
-            method: 'GET',
-            headers: { "User-Agent": "hytale-api/1.0 (+https://github.com/HytaleNews/hytale-api)" },
+        // Will fetch new data every hour!
+        const promise = fetch(`https://api.allorigins.win/raw?url=https://hytale.com/api/blog/post/published?limit=5&nocache=${now.getUTCHours()}`, {
+            headers: { "User-Agent": "hytale-tracker/2.0 (+https://github.com/hugovdev/hytale-tracker-astro)" },
         });
 
         promise.catch(error => {
             console.log(error)
             this.setState({ error: true })
         });
-        
+
         const responseJson = await promise.then((res) => res.text());
 
         const blogPosts: BlogPostSummary[] = JSON.parse(responseJson);
