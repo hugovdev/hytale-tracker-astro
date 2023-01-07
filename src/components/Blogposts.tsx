@@ -38,10 +38,7 @@ class Blogposts extends React.Component<any, any> {
     }
 
     async componentDidMount() {
-        const now: Date = new Date()
-
-        // Will fetch new data every hour!
-        const promise = fetch(`https://api.allorigins.win/raw?url=https://hytale.com/api/blog/post/published?limit=5&nocache=${now.getUTCHours()}`, {
+        const promise = fetch(`https://api.allorigins.win/raw?url=https://hytale.com/api/blog/post/published?limit=5&nocache=${Date.now()}`, {
             headers: { "User-Agent": "hytale-tracker/2.0 (+https://github.com/hugovdev/hytale-tracker-astro)" },
         });
 
