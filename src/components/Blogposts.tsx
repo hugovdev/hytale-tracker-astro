@@ -1,5 +1,5 @@
 import React from "react";
-import type { Blog, BlogPostSummary } from "../types/blogpost";
+import type { BlogPostSummary } from "../types/blogpost";
 import Blogpost from "./Blogpost";
 
 class Blogposts extends React.Component<any, any> {

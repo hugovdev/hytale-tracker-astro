@@ -64,16 +64,17 @@ const news = await data.json();
 		>
 			<div class="inline-flex pb-8">
 				{
-					news.news.map((entry: any) => (
+					news.map((entry: any) => (
 						<EntryCard entry={entry}>
-							<Image
-								src={entry.picture}
-								width={480}
-								aspectRatio={16 / 9}
-								class="w-full rounded-2xl rounded-b-none"
-								alt={"Cover for a news entry."}
-								slot="entry-image"
-							/>
+							<Fragment slot="entry-image">
+								<Image
+									src={entry.picture}
+									width={480}
+									aspectRatio={16 / 9}
+									class="w-full rounded-2xl rounded-b-none"
+									alt={"Cover for a news entry."}
+								/>
+							</Fragment>
 						</EntryCard>
 					))
 				}

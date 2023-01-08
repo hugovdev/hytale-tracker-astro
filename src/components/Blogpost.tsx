@@ -18,8 +18,8 @@ export default function Blogpost(props: any) {
 
             <div className="bg-slate-200 py-5 px-8 md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none h-full md:h-auto">
                 <div className="max-h-full md:max-h-[130px] overflow-y-hidden">
-                    <div className="font-bold text-base md:text-lg text-slate-900">{post.title}</div>
-                    <div className="pb-2 text-slate-600 text-sm md:text-base font-medium">{postDate.toLocaleDateString("en-US") + " by " + post.author} </div>
+                    <div className="font-bold text-base md:text-lg text-slate-900 leading-5">{post.title}</div>
+                    <div className="pb-4 md:pb-2 text-slate-500 text-sm font-semibold">{postDate.toLocaleDateString("en-US") + " by " + post.author} </div>
                     <div className="pb-5 text-slate-800 text-sm md:text-base font-medium" >{post.bodyExcerpt} </div>
                 </div>
             </div>
