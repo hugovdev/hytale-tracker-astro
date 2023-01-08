@@ -12,7 +12,7 @@ export default function JobOpening(props: any) {
 
         <div className="justify-between gap-2 flex-wrap flex items-center">
             <span className="">{"Updated at " + updateDate.toLocaleDateString("en-US")}</span>
-            <a href="" className="bg-blue-700 hover:bg-blue-800 py-2 px-4 rounded-md text-blue-50 font-medium">Apply</a>
+            <a href={"https://boards.greenhouse.io/hypixelstudios/jobs/" + jobOpening.id} className="bg-blue-700 hover:bg-blue-800 py-2 px-4 rounded-md text-blue-50 font-medium">Apply</a>
         </div>
     </div>
 }
