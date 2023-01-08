@@ -8,7 +8,7 @@ class Blogposts extends React.Component<any, any> {
         super(props);
         this.state = {
             posts: [],
-            error: false,
+            error: "",
             recentPosts: 0,
             daysSinceLastBlogpost: 0,
         };
@@ -33,17 +33,15 @@ class Blogposts extends React.Component<any, any> {
 
     getDifferenceInDays(date1: Date, date2: Date) {
         var diff = Math.abs(date1.getTime() - date2.getTime());
-        return Math.ceil(diff / (1000 * 3600 * 24)); 
+        return Math.ceil(diff / (1000 * 3600 * 24));
     }
 
     async componentDidMount() {
-        const promise = fetch(`https://api.allorigins.win/raw?url=https://hytale.com/api/blog/post/published?limit=5&nocache=${Date.now()}`, {
-            headers: { "User-Agent": "hytale-tracker/2.0 (+https://github.com/hugovdev/hytale-tracker-astro)" },
-        });
+        const promise = fetch(`https://api.allorigins.win/raw?url=https://hytale.com/api/blog/post/published?limit=5&nocache=${Date.now()}`);
 
         promise.catch(error => {
             console.log(error)
-            this.setState({ error: true })
+            this.setState({ error: error })
         });
 
         const responseJson = await promise.then((res) => res.text());
@@ -56,7 +54,7 @@ class Blogposts extends React.Component<any, any> {
     render() {
         const today = new Date();
 
-        return this.state.error ? <p>Error!</p> : <div>
+        return this.state.error ? <p>Error! {this.state.error} </p> : <div>
 
             <div className="flex flex-wrap gap-3">
                 <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentPosts} recent blogposts</a>
