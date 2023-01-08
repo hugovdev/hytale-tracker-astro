@@ -62,11 +62,7 @@ class JobOpenings extends React.Component<any, any> {
         var listing: any = [];
 
         if (this.state.jobs.length === 0)
-            listing = (
-                <span className="text-gray-400 font-semibold text-lg">
-                    Loading Jobs...
-                </span>
-            );
+            listing = (<div className="font-bold text-2xl text-slate-800 w-fit m-auto">Loading...</div>);
         else {
             listing = (
                 <div className="mt-10 flex flex-wrap gap-3 w-fit m-auto items-center justify-center lg:justify-start">
@@ -78,7 +74,7 @@ class JobOpenings extends React.Component<any, any> {
         }
 
         return (
-            <div className="pb-20 w-fit m-auto">
+            <div className="pb-20">
                 <a href="https://hypixelstudios.com/jobs/" className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentJobs} recent job updates</a>
                 {listing}
             </div>
