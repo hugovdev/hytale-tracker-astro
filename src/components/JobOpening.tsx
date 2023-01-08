@@ -2,8 +2,6 @@ export default function JobOpening(props: any) {
     const jobOpening = props.job;
     const updateDate = new Date(jobOpening.updated_at);
 
-    console.log(jobOpening);
-
     return <div className="w-[340px] h-36 bg-slate-100 py-2 px-5 rounded-lg shadow-md">
         <div className="h-16">
             <div className="font-bold text-lg mt-5 text-slate-800 leading-5">{jobOpening.title}</div>
