@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import EntryCard from "../components/EntryCard";
 import Blogposts from "../components/Blogposts";
 import { Image } from "@astrojs/image/components";
+import JobOpenings from "../components/JobOpenings";
 
 const data = await fetch("https://api.npoint.io/0d0efd88c2ed01397ae8");
 const news = await data.json();
@@ -108,9 +109,16 @@ const news = await data.json();
 			Latest Job openings
 		</div>
 		<p
-			class="mb-10 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700"
+			class="mb-5 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700"
 		>
 			See which recent jobs have been changed or added by Hypixel Studios!
 		</p>
+
+		<JobOpenings client:idle />
 	</main>
+
+	<footer class="bg-slate-300 text-center py-10">
+		Copyright © 2023 Hugo. <br/>
+		Not affiliated with Hypixel Studios or Hytale.
+	</footer>
 </Layout>
