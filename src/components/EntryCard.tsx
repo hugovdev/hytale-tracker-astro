@@ -4,9 +4,8 @@ export default function EntryCard(props: any) {
      const entry = props.entry as NewsEntry;
 
      return <div className="w-[300px] md:w-[480px] mr-5 ">
-          {/*<img src={entry.picture} alt="Cover for a news entry." className="w-full rounded-t-2xl" />*/}
           <slot>
-               <img src="tv-glitch.webp" alt="Problem loading image." className="w-full rounded-t-2xl" />
+               <img src="tv-glitch.webp" alt="Problem loading image." className="w-[300px] md:w-[480px] rounded-t-2xl" />
           </slot>
 
           <div className="bg-slate-200 md:py-10 py-5 px-8 rounded-b-2xl w-full relative shadow-md">
