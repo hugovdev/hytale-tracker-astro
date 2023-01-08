@@ -5,10 +5,10 @@ export default function EntryCard(props: any) {
 
      return <div className="w-[300px] md:w-[480px] mr-5 ">
           <slot>
-               <img src="tv-glitch.webp" alt="Problem loading image." className="w-[300px] md:w-[480px] rounded-t-2xl" />
+               <img src={entry.picture} alt="Problem loading image." className="w-full rounded-t-2xl" />
           </slot>
 
-          <div className="bg-slate-200 md:py-10 py-5 px-8 rounded-b-2xl w-full relative shadow-md">
+          <div className="bg-slate-100 md:py-10 py-5 px-8 rounded-b-2xl w-full relative shadow-md">
                <div>
                     <div className="h-[290px] md:h-[230px]">
                          <div className="font-bold text-lg md:text-xl text-slate-900">{entry.title}</div>

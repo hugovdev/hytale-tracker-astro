@@ -59,8 +59,8 @@ class Blogposts extends React.Component<any, any> {
         return this.state.error ? <p>Error!</p> : <div>
 
             <div className="flex flex-wrap gap-3">
-                <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-cyan-200 text-cyan-900 px-4 border-2 border-cyan-200 hover:border-cyan-300">{this.state.recentPosts} recent blogposts</a>
-                <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-cyan-200 text-cyan-900 px-4 border-2 border-cyan-200 hover:border-cyan-300">{this.state.daysSinceLastBlogpost} days since last blogpost</a>
+                <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentPosts} recent blogposts</a>
+                <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.daysSinceLastBlogpost} days since last blogpost</a>
             </div>
 
             <div className="w-fit m-auto">

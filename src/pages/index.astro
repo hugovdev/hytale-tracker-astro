@@ -10,7 +10,7 @@ const news = await data.json();
 
 <Layout title="Hytale Tracker 2.0">
 	<main class="m-auto max-w-[90%] md:max-w-[80%]">
-		<div class="my-10 border-slate-300 border-t-2 w-[80%] mx-auto"></div>
+		<div class="my-10 border-slate-400 border-t-2 w-[80%] mx-auto"></div>
 
 		<div
 			class="w-fit m-auto mb-5 font-black text-4xl sm:text-6xl text-slate-900"
@@ -25,42 +25,42 @@ const news = await data.json();
 		</p>
 
 		<div
-			class="w-fit flex flex-wrap m-auto mb-10 gap-2 justify-center md:gap-5"
+			class="w-fit flex flex-wrap m-auto mb-10 gap-1 sm:gap-2 justify-center items-center bg-slate-50 rounded-lg py-2 px-4 text-sm sm:text-base shadow-md"
 		>
 			<a
 				href="#news"
-				class="rounded-full font-medium bg-cyan-200 text-cyan-900 px-4 border-2 border-cyan-200 hover:border-cyan-300"
+				class="font-medium text-slate-800 hover:bg-slate-200 py-2 px-2 sm:px-4 rounded-lg"
 				>News</a
 			>
 			<a
 				href="#blogposts"
-				class="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300"
+				class="font-medium text-slate-800 hover:bg-slate-200 py-2 px-2 sm:px-4 rounded-lg"
 				>Blogposts</a
 			>
 			<a
 				href="#jobs"
-				class="rounded-full font-medium bg-pink-200 text-pink-900 px-4 border-2 border-pink-200 hover:border-pink-300"
+				class="font-medium text-slate-800 hover:bg-slate-200 py-2 px-2 sm:px-4 rounded-lg"
 				>Job Openings</a
 			>
 		</div>
 
-		<div class="my-10 border-slate-300 border-t-2 w-[80%] mx-auto"></div>
+		<div class="my-10 border-slate-400 border-t-2 w-[80%] mx-auto"></div>
 
 		<div
-			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-800"
+			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-900"
 			id="news"
 		>
 			Latest News
 		</div>
 		<p
-			class="mb-10 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700"
+			class="mb-10 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-800"
 		>
 			Here you'll find the latest news related to the game or Hypixel
 			Studios, not necessarily official, but always trust-worthy!
 		</p>
 
 		<div
-			class="max-w-full overflow-x-scroll overflow-y-hidden scrollbar-thumb-slate-400 hover:scrollbar-thumb-slate-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md scrollbar-track-slate-300 scrollbar-thin"
+			class="max-w-full overflow-x-scroll overflow-y-hidden scrollbar-thumb-slate-500 hover:scrollbar-thumb-slate-600 scrollbar-track-rounded-md scrollbar-thumb-rounded-md scrollbar-track-slate-400 scrollbar-thin"
 		>
 			<div class="inline-flex pb-8">
 				{
@@ -81,16 +81,16 @@ const news = await data.json();
 			</div>
 		</div>
 
-		<div class="my-10 border-slate-300 border-t-2 w-[80%] mx-auto"></div>
+		<div class="my-10 border-slate-400 border-t-2 w-[80%] mx-auto"></div>
 
 		<div
-			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-800"
+			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-900"
 			id="blogposts"
 		>
 			Latest Blogposts
 		</div>
 		<p
-			class="mb-5 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700"
+			class="mb-5 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-800"
 		>
 			Here you'll find the latest official articles and blogposts released
 			by the Hytale team at Hypixel Studios. These are released once or
@@ -99,7 +99,7 @@ const news = await data.json();
 
 		<Blogposts client:idle />
 
-		<div class="my-10 border-slate-300 border-t-2 w-[80%] mx-auto"></div>
+		<div class="my-10 border-slate-400 border-t-2 w-[80%] mx-auto"></div>
 
 		<div
 			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-800"
