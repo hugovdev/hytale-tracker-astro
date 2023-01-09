@@ -1,18 +1,5 @@
 ---
-import "@fontsource/poppins/100.css";
-import "@fontsource/poppins/200.css";
-import "@fontsource/poppins/300.css";
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/poppins/800.css";
-import "@fontsource/poppins/900.css";
-
-import poppins400 from "@fontsource/poppins/files/poppins-latin-400-normal.woff";
-import poppins700 from "@fontsource/poppins/files/poppins-latin-700-normal.woff";
-import poppins800 from "@fontsource/poppins/files/poppins-latin-800-normal.woff";
-import poppins900 from "@fontsource/poppins/files/poppins-latin-900-normal.woff";
+import "../styles/main.css";
 
 export interface Props {
 	title: string;
@@ -22,16 +9,55 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-gray-200 scrollbar-thumb-slate-500 hover:scrollbar-thumb-slate-600 scrollbar-track-rounded-md scrollbar-thumb-rounded-md scrollbar-track-slate-400 scrollbar-thin">
+<html
+	lang="en"
+	class="scroll-smooth bg-gray-200 scrollbar-thumb-slate-500 hover:scrollbar-thumb-slate-600 scrollbar-track-rounded-md scrollbar-thumb-rounded-md scrollbar-track-slate-400 scrollbar-thin"
+>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preload" as="font" href={poppins400} type="font/woff2" />
-		<link rel="preload" as="font" href={poppins700} type="font/woff2" />
-		<link rel="preload" as="font" href={poppins800} type="font/woff2" />
-		<link rel="preload" as="font" href={poppins900} type="font/woff2" />
+
+		<link
+			rel="preload"
+			href="/fonts/poppins-v20-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="/fonts/poppins-v20-latin-500.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="/fonts/poppins-v20-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="/fonts/poppins-v20-latin-800.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="/fonts/poppins-v20-latin-900.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 
 		<title>{title}</title>
 	</head>
