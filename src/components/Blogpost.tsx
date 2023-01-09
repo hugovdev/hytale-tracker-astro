@@ -16,7 +16,7 @@ export default function Blogpost(props: any) {
             <img src={post ? ("https://cdn.hytale.com/variants/blog_thumb_" +
                 post.coverImage.s3Key) : "tv-glitch.webp"} alt={post ? "Cover for a blogpost entry." : "Cover for unloaded blogpost."} className="md:max-w-[334px] rounded-tl-2xl md:rounded-bl-2xl rounded-bl-none rounded-tr-2xl md:rounded-tr-none overflow-x-clip" />
 
-            <div className="bg-slate-100 py-5 px-8 md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none h-full md:h-auto w-full">
+            <div className="bg-slate-100 py-5 px-8 md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none h-[265px] md:h-auto w-full">
                 <div className="max-h-full md:max-h-[130px] overflow-y-hidden">
                     {post ? <div className="font-bold text-base md:text-lg text-slate-900 leading-5">{post.title}</div> :
                         <div className="border-t-[24px] border-slate-500 lg:w-[290px] w-[260px] mb-1" />}
