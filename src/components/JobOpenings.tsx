@@ -59,26 +59,16 @@ class JobOpenings extends React.Component<any, any> {
     }
 
     render() {
-        var listing: any = [];
+        return <div className="pb-20">
+            <a href="https://hypixelstudios.com/jobs/" className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentJobs} recent job updates</a>
 
-        if (this.state.jobs.length === 0)
-            listing = (<div className="font-bold text-2xl text-slate-800 w-fit m-auto">Loading...</div>);
-        else {
-            listing = (
-                <div className="mt-10 flex flex-wrap gap-3 w-fit m-auto items-center justify-center lg:justify-start">
-                    {this.state.jobPositions.map((job: any, i: any) => {
-                        return job;
-                    })}
-                </div>
-            );
-        }
-
-        return (
-            <div className="pb-20">
-                <a href="https://hypixelstudios.com/jobs/" className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentJobs} recent job updates</a>
-                {listing}
+            <div className="mt-10 flex flex-wrap gap-3 w-fit m-auto items-center justify-center lg:justify-start">
+                {this.state.jobs.length > 0 ? this.state.jobPositions.map((job: any, i: any) => {
+                    return job;
+                }) : Array.from({ length: 10 }).map((it, index) => <JobOpening key={"job-placeholder-" + index} />)}
             </div>
-        );
+        </div>;
+
     }
 }
 
