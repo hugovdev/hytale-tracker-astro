@@ -67,7 +67,7 @@ const news = await data.json();
 				{
 					news.map((entry: any) => (
 						<EntryCard entry={entry}>
-							<Fragment>
+							<Fragment slot="entry-image">
 								<Image
 									src={entry.picture}
 									width={480}
