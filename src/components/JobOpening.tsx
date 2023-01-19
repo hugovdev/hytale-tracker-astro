@@ -6,11 +6,11 @@ export default function JobOpening(props: any) {
         <div className="h-16">
             {jobOpening ?
                 <div className="font-bold text-lg mt-5 text-slate-900 leading-5">{jobOpening.title}</div> :
-                <div className="border-t-[24px] border-slate-500 w-4/5 mt-5 mb-2" />}
+                <div className="border-t-[24px] animate-pulse rounded-md border-slate-500 w-4/5 mt-5 mb-2" />}
 
             {jobOpening ?
                 <div className="font-semibold text-slate-500 mb-5">{jobOpening.location.name}</div> :
-                <div className="border-t-[12px] border-slate-300 w-2/5 mb-5" />}
+                <div className="border-t-[12px] animate-pulse rounded-md border-slate-300 w-2/5 mb-5" />}
         </div>
 
         <div className="justify-between gap-2 flex-wrap flex items-center">
