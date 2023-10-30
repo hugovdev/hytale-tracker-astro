@@ -61,6 +61,10 @@ class Blogposts extends React.Component<any, any> {
                 <a href={"https://hytale.com/news/archive/" + today.getFullYear() + "/" + (today.getMonth() + 1)} className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.daysSinceLastBlogpost} days since last blogpost</a>
             </div>
 
+            {this.props.inminentBlogpost ? <div className="mt-3">
+                <a href={"https://hytale.com/news/"} className="rounded-full font-medium bg-yellow-200 text-yellow-900 px-4 border-2 border-yellow-200 hover:border-yellow-300">⚠️ A blogpost will be releasing soon!</a>
+            </div> : null}
+
             <div className="w-full m-auto">
                 <div className="mt-10 inline-flex flex-col gap-8 md:gap-5 pb-8 justify-center items-center m-auto w-full">
                     {this.state.posts.length > 0 ? this.state.posts.map((post: any) => <Blogpost post={post} key={post._id} />)

@@ -65,7 +65,7 @@ const news = await data.json();
 		>
 			<div class="inline-flex pb-8">
 				{
-					news.map((entry: any) => (
+					news.lastNews.map((entry: any) => (
 						<EntryCard entry={entry}>
 							<Fragment slot="entry-image">
 								<Image
@@ -98,7 +98,7 @@ const news = await data.json();
 			twice per year currently.
 		</p>
 
-		<Blogposts client:idle />
+		<Blogposts inminentBlogpost={news.inminentBlogpost == 'true'} client:idle />
 
 		<div class="my-10 border-slate-400 border-t-2 w-[80%] mx-auto"></div>
 
@@ -106,7 +106,7 @@ const news = await data.json();
 			class="mb-3 font-bold text-3xl sm:text-4xl text-slate-800"
 			id="jobs"
 		>
-			Latest Job openings
+			Latest Job openings  
 		</div>
 		<p
 			class="mb-5 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700"
