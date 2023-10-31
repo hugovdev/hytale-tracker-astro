@@ -129,3 +129,23 @@
         /* Legacy iOS */
     }
 }
+
+.navBarButton {
+    @apply font-medium text-slate-800 dark:text-slate-300 dark:hover:bg-slate-800 hover:bg-slate-200 py-2 px-2 sm:px-4 rounded-lg
+}
+
+.sectionName {
+    @apply mb-3 font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-300
+}
+
+.sectionDescription {
+    @apply mb-5 text-lg sm:text-xl w-full xl:w-3/6 lg:w-4/5 text-slate-700 dark:text-slate-400
+}
+
+.greenPill {
+    @apply rounded-full font-medium bg-emerald-200 dark:bg-emerald-900 dark:text-emerald-200 text-emerald-900 px-4 border-2 dark:border-emerald-900 border-emerald-200 dark:hover:border-emerald-700 hover:border-emerald-300
+}
+
+.yellowPill {
+    @apply rounded-full font-medium bg-yellow-200 dark:bg-yellow-900 dark:text-yellow-200 text-yellow-900 px-3 border-2 dark:border-yellow-900 border-yellow-200 dark:hover:border-yellow-700 hover:border-yellow-300
+}

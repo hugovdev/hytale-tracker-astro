@@ -16,13 +16,13 @@ export default function Blogpost(props: any) {
             <img src={post ? ("https://cdn.hytale.com/variants/blog_thumb_" +
                 post.coverImage.s3Key) : "tv-glitch.webp"} alt={post ? "Cover for a blogpost entry." : "Cover for unloaded blogpost."} className="md:max-w-[334px] rounded-tl-2xl md:rounded-bl-2xl rounded-bl-none rounded-tr-2xl md:rounded-tr-none overflow-x-clip" />
 
-            <div className="bg-slate-100 py-5 px-8 md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none h-[265px] md:h-auto w-full">
+            <div className="bg-slate-100 dark:bg-slate-800 py-5 px-8 md:rounded-tr-2xl rounded-br-2xl rounded-bl-2xl md:rounded-bl-none h-[265px] md:h-auto w-full">
                 <div className="max-h-full md:max-h-[130px] overflow-y-hidden">
-                    {post ? <div className="font-bold text-base md:text-lg text-slate-900 leading-5">{post.title}</div> :
+                    {post ? <div className="font-bold text-base md:text-lg text-slate-900 dark:text-slate-200 leading-5">{post.title}</div> :
                         <div className="border-t-[24px] animate-pulse rounded-md border-slate-500 lg:w-[290px] w-[260px] mb-1" />}
-                    {post ? <div className="pb-4 md:pb-2 text-slate-500 text-sm font-semibold">{postDate!.toLocaleDateString("en-US") + " by " + post.author} </div>
+                    {post ? <div className="pb-4 md:pb-2 dark:text-slate-400 text-slate-500 text-sm font-semibold">{postDate!.toLocaleDateString("en-US") + " by " + post.author} </div>
                         : <div className="border-t-[12px] animate-pulse rounded-md border-slate-300 w-[160px] mb-4" />}
-                    {post ? <div className="pb-5 text-slate-800 text-sm md:text-base font-medium">{post.bodyExcerpt} </div> :
+                    {post ? <div className="pb-5 dark:text-slate-300 text-slate-800 text-sm md:text-base font-medium">{post.bodyExcerpt} </div> :
                         <div><div className="border-t-[16px] animate-pulse rounded-md border-slate-400 w-full mb-2" />
                             <div className="border-t-[16px] animate-pulse rounded-md border-slate-400 w-4/5" /></div>}
                 </div>

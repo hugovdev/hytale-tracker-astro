@@ -62,8 +62,8 @@ class JobOpenings extends React.Component<any, any> {
         return <div className="pb-20">
 
             <div className="flex flex-wrap gap-3">
-                <a href="https://hypixelstudios.com/jobs/" className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.jobs.length} job openings</a>
-                <a href="https://hypixelstudios.com/jobs/" className="rounded-full font-medium bg-emerald-200 text-emerald-900 px-4 border-2 border-emerald-200 hover:border-emerald-300">{this.state.recentJobs} recent job updates</a>
+                <a href="https://hypixelstudios.com/jobs/" className="greenPill">{this.state.jobs.length} job openings</a>
+                <a href="https://hypixelstudios.com/jobs/" className="greenPill">{this.state.recentJobs} recent job updates</a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3 w-fit m-auto items-center justify-center lg:justify-start">
